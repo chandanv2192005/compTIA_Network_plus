@@ -1,0 +1,25 @@
+Network topology defines the physical or logical layout of how devices communicate within a network. The video categorizes these into several common types:
+
+Common Wired Topologies:
+
+Star Topology: All devices connect to a central point, like a hub or switch. While it isolates device failures, the central hub represents a single point of failure 
+
+Mesh Topology: Every device is connected to every other device, providing high redundancy. It is expensive due to cabling requirements and is primarily used in wide-area networks like the Internet
+
+Point-to-Point: The simplest form, involving a direct connection between two hosts using a single cable.
+
+Spine-Leaf Topology: A two-layer design consisting of spine and leaf switches. It minimizes latency by ensuring a maximum of two hops between any two servers, making it highly efficient for modern data centers 
+
+Hybrid Topology: A combination of multiple topology types used to suit an organization's specific needs.
+
+Enterprise Design Models:
+
+Three-Tier Hierarchical Model: A Cisco blueprint for large networks consisting of three layers: Core (backbone/high-speed routing), Distribution (middleman/policies), and Access (end-user connections)
+
+Collapsed Core Model: A two-tier variation where the core and distribution layers are combined, designed to reduce costs in smaller networks.
+
+Traffic Flow Concepts:
+
+East-West Traffic: Communication between machines within the same data center.
+
+North-South Traffic: Communication between a data center and an external network.
