@@ -1,0 +1,70 @@
+Layer 7: The Application Layer
+This is the only layer the user actually touches. It provides network services directly to software applications.
+
+The Job: Identifying communication partners, determining resource availability, and synchronizing communication.
+
+Key Protocols: HTTP/HTTPS (Web), DNS (Names), SMTP/IMAP (Email), SSH (Secure Shell).
+
+Cybersecurity Angle: This is where SQL Injection, Cross-Site Scripting (XSS), and DDoS attacks like "HTTP Floods" happen. Security experts use Web Application Firewalls (WAF) to protect this layer.
+
+Layer 6: The Presentation Layer
+This is the "Translator" or the "Formatting" layer. It ensures that the data sent from the application layer of one system can be read by the application layer of another.
+
+The Job: Data representation, Encryption/Decryption, and Compression.
+
+Example: When you send a photo, Layer 6 ensures it is encoded as a JPEG. When you use HTTPS, Layer 6 (along with Layer 5) handles the SSL/TLS encryption that keeps your data private.
+
+Cybersecurity Angle: Attackers can exploit vulnerabilities in how data is "unpacked" or decrypted (e.g., malformed SSL certificates).
+
+Layer 5: The Session Layer
+This layer manages the "dialogue" between computers. It starts, maintains, and ends the connection (the session).
+
+The Job: Session setup, teardown, and synchronization (checkpoints).
+
+Example: If you are downloading a 2GB file and your connection drops, the Session layer manages the "checkpoint" so you don't have to start the download from zero.
+
+Cybersecurity Angle: Session Hijacking. If an attacker steals your "Session ID" (often stored in a browser cookie), they can pretend to be you without needing your password.
+
+Layer 4: The Transport Layer
+This is the first layer where data is actually "moved" reliably.
+
+The Job: Segmentation (chopping data into pieces), Flow Control (not sending data faster than the receiver can handle), and Error Correction.
+
+Key Protocols: TCP (Reliable/Connection-oriented) and UDP (Fast/Connectionless).
+
+The Identifier: Ports (like Port 80, 443, or your random WhatsApp source ports).
+
+Cybersecurity Angle: Port Scanning. Attackers use tools like Nmap to see which "doors" (ports) are open at this layer.
+
+Layer 3: The Network Layer
+This is the "Postal Service" of the internet. It handles the routing of data across different networks.
+
+The Job: Logical addressing (IP Addresses) and Path Determination (Routing).
+
+The Hardware: Routers live here.
+
+Key Protocols: IPv4, IPv6, ICMP (Ping), and IGMP.
+
+Cybersecurity Angle: IP Spoofing and DDoS. Attackers hide their identity by faking the Source IP in the packet header at this layer.
+
+Layer 2: The Data Link Layer
+This layer handles communication between two devices on the same physical segment (like your phone and your router).
+
+The Job: Physical addressing (MAC Addresses) and error detection at the frame level.
+
+The Hardware: Switches live here.
+
+Sub-layers: 1.  LLC (Logical Link Control): Identifies network protocols.
+2.  MAC (Media Access Control): Handles hardware IDs.
+
+Cybersecurity Angle: ARP Spoofing. Since this layer trusts MAC addresses, an attacker can trick a switch into sending them your data.
+
+Layer 1: 
+The Physical LayerThe "Basement." This is the actual hardware that moves raw bits ($1$s and $0$s).
+
+The Job: Transmission of raw bitstreams over a physical medium.The Medium: Ethernet cables, Fiber optics, Radio waves (Wi-Fi), Hubs, and Repeaters.
+
+
+
+
+Cybersecurity Angle: Physical Security. If an attacker can plug a "Rubber Ducky" (a malicious USB) into your computer or tap into a physical fiber line, layers 2 through 7 don't matter—you're already hacked.
