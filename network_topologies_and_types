@@ -1,6 +1,6 @@
 Network topology defines the physical or logical layout of how devices communicate within a network. The video categorizes these into several common types:
 l
-Common Wired Topologies: 
+Common Wired Topologies:  
  
 Star Topology: All devices connect to a central point, like a hub or switch. While it isolates device failures, the central hub represents a single point of failure 
 
