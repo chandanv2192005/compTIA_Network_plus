@@ -1,7 +1,7 @@
 Layer 7: The Application Layer
 This is the only layer the user actually touches. It provides network services directly to software applications.
 
-The Job: Identifying communication partners, determining resource availability, and synchronizing communication.
+The Job: Identifying communication partners, determining resource availability, and synchronizing communication. 
 
 Key Protocols: HTTP/HTTPS (Web), DNS (Names), SMTP/IMAP (Email), SSH (Secure Shell).
 
