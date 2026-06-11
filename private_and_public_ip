@@ -1,0 +1,27 @@
+Private ip
+
+Private IP addresses are designed for use only within a local network (like your home Wi-Fi or a corporate office network). They are completely invisible and unreachable from the public internet.
+
+The Rule Book (RFC 1918): To prevent chaos, the Internet Engineering Task Force reserved three specific blocks of IP addresses exclusively for private networks. No router on the public internet is allowed to route these addresses.
+
+public ip
+
+A Public IP address is a globally unique address assigned to a device connected directly to the internet.
+
+The Rule Book: Every public IP address must be unique across the entire globe. They are strictly managed by an international body called IANA (Internet Assigned Numbers Authority) and handed down to Internet Service Providers (ISPs like Airtel, Comcast, or Jio).
+
+The Destination: Any server hosting a public website or service (like google.com or netflix.com) must have a public IP address so devices across the world can navigate to it.
+
+How Private Talks to Public
+
+Because private IPs cannot travel on the public internet, a device on an internal network needs a translator to access global websites. This translator is your gateway router running NAT (Network Address Translation).
+
+Imagine your laptop (192.168.0.102) wants to fetch a webpage from Google:
+
+Local Departure: Your laptop wraps the data packet with its source address as private IP 192.168.0.102 and sends it to the router.
+
+The NAT Translation: The router strips off the private IP and replaces it with the household's single Public IP assigned by your ISP (e.g., 122.160.10.5).
+
+Global Transit: The internet routes the packet to Google because it bears a valid, public return address.
+
+The Return: When Google replies, it sends the data to your public IP (122.160.10.5). Your router receives it, checks its internal logbook, translates the destination back to 192.168.0.102, and hands it to your laptop.
