@@ -1,0 +1,24 @@
+dynamic host configuration protocol
+
+the DORA process
+
+Discover
+Offer
+Request
+Acknowledge
+
+Step 1: Discover (Client to Server)
+The client machine powers on or connects to Wi-Fi. Because it doesn't have an IP, it sends out a DHCP Discover packet to a destination IP of 255.255.255.255 (Network Broadcast) and a destination MAC of FF:FF:FF:FF:FF:FF (Hardware Broadcast). Every machine on the local network segment receives this packet, but only a DHCP server will process it.
+
+Analogy: Someone walking into a dark room and shouting, "Is there a landlord here?"
+
+Step 2: Offer (Server to Client)
+The DHCP server hears the broadcast. It checks its internal database—called a DHCP Scope (a pool of available IP addresses)—and reserves an available IP. It sends a DHCP Offer packet back to the network containing a proposed IP address, a subnet mask, and the lease duration.
+
+Step 3: Request (Client to Server)
+The client receives the offer. If there are multiple DHCP servers on a large corporate network, the client typically accepts the first offer it receives. It broadcasts a DHCP Request packet back to the network. It broadcasts this step to tell all the other DHCP servers: "Thank you, but I have chosen Server A's offer, so you can unlock the IPs you reserved for me."
+
+Analogy: Shouting back, "I accept Landlord A's offer!"
+
+Step 4: Acknowledge (Server to Client)
+The chosen DHCP server receives the request. It finalizes the entry in its database, mapping the client's physical MAC address to the leased IP address. It sends a final DHCP Acknowledge (ACK) packet to the client. This packet contains the complete configuration payload: the IP address, subnet mask, default gateway, and DNS servers. The client can now communicate on the network.
