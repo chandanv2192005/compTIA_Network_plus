@@ -1,0 +1,3 @@
+The Internet Protocol (IP) is the primary network layer protocol in the TCP/IP protocol suite. Its core responsibility is routing packets across network boundaries from a source host to a destination host based entirely on IP addresses.
+
+Operating at Layer 3 (Network Layer) of the OSI model (or the Internet Layer of the TCP/IP model), IP defines the packet structures that encapsulate the data to be delivered, as well as the addressing methods used to label those packets.
