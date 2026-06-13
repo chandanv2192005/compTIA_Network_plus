@@ -1,0 +1,13 @@
+Version (4 bits): Identifies the protocol as IPv6 (0110).
+
+Traffic Class (8 bits): Functions identically to the IPv4 Type of Service (ToS) field for prioritizing traffic.
+
+Flow Label (20 bits): A new feature in IPv6 that tags packets belonging to a specific communication flow so routers can route them along identical paths without inspecting the inner packet contents.
+
+Payload Length (16 bits): Indicates the size of the data payload only, omitting the fixed 40-byte header length.
+
+Next Header (8 bits): Replaces the IPv4 "Protocol" field. It specifies either the upper-layer protocol (like TCP/UDP) or points to an optional IPv6 "Extension Header" containing extra routing or security options.
+
+Hop Limit (8 bits): Replaces the IPv4 TTL field, functioning exactly the same way to mitigate routing loops.
+
+Source & Destination Addresses (128 bits each): The larger hex-based addresses.
