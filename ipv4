@@ -1,0 +1,17 @@
+Version (4 bits): Identifies the version of the protocol being used (e.g., 0100 for IPv4).
+
+Internet Header Length (IHL - 4 bits): Specifies the length of the header in 32-bit words, allowing the receiving system to know where the header ends and the data payload begins.
+
+Type of Service (ToS / DiffServ - 8 bits): Used for Quality of Service (QoS) to prioritize critical real-time traffic like voice or streaming video over standard web traffic.
+
+Total Length (16 bits): Defines the entire size of the packet (header plus data) in bytes.
+
+Identification (16 bits), Flags (3 bits), Fragment Offset (13 bits): These three fields work together to manage the packet fragmentation and reassembly process described above.
+
+Time to Live (TTL - 8 bits): A critical security and counter-loop mechanism. Every time a router forwards a packet, it decrements the TTL value by 1. If the TTL reaches 0 before the packet hits its destination, the router drops the packet and sends an ICMP "Time Exceeded" message back to the source. This prevents orphaned packets from circulating indefinitely through network loops.
+
+Protocol (8 bits): Indicates which upper-layer protocol should receive the decapsulated data payload (e.g., 6 for TCP, 17 for UDP, 1 for ICMP).
+
+Header Checksum (16 bits): A mathematical verification code used exclusively to detect errors or corruption within the header itself. If the checksum fails, the router drops the packet.
+
+Source & Destination IP Addresses (32 bits each): The exact logical origins and endpoints of the packet.
