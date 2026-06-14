@@ -1,0 +1,16 @@
+The load balancer uses smart math formulas (algorithms) to determine which backend server should receive the next incoming user:
+
+Round Robin: The simplest method. It passes requests down the line sequentially. Request 1 goes to Server A, Request 2 goes to Server B, Request 3 goes to Server C, and then it loops back to Server A.
+
+Least Connections: The load balancer looks at the live traffic data. It sends the new user to whichever server currently has the fewest active sessions. This is excellent for heavy tasks like video rendering or large downloads.
+
+IP Hash: The load balancer uses a mathematical formula on the user's IP address to combine them with a specific server. This ensures that a specific user stays connected to the exact same server for their entire session (important for keeping items inside a shopping cart).
+
+A. Health Checks (The Lifeline)
+The load balancer constantly pings the backend servers every few seconds (e.g., "Are you alive?"). If Server B crashes or catches fire, the load balancer stops sending traffic to it instantly. It routes everything to Servers A and C until a technician fixes Server B. The users browsing the website never even notice a problem.
+
+B. SSL Offloading (Encryption Relief)
+As we discussed in our OSI model chat, decrypting HTTPS traffic takes a lot of CPU processing power. A load balancer can sit at the front edge, decrypt the incoming SSL/TLS traffic itself, and hand the raw data to the backend servers in plain text. This frees up the backend servers to focus entirely on running the website code quickly.
+
+C. Sticky Sessions (Session Persistence)
+If you log into a website and the load balancer suddenly switches your next click to a different server, that new server won't know who you are and might force you to log in again. The load balancer uses cookies or IP tracking to "stick" you to one server until you log out.
