@@ -1,0 +1,18 @@
+Unmanaged Switches (Plug-and-Play)
+These are the most common type used in home networks, small offices, or built directly into the back of consumer Wi-Fi routers.
+
+They require zero configuration. You power them on, plug in your Ethernet cables, and they start routing traffic automatically.
+
+You cannot log into them, change settings, or monitor their performance.
+
+Managed Switches (The Enterprise Standard)
+These are high-end devices used in corporate offices and data centers. They feature their own internal operating systems that allow network engineers and SOC analysts to log in and manipulate the traffic. They offer:
+
+VLAN Configuration: Splitting one physical switch into multiple virtual networks.
+
+Port Mirroring: Duplicating network traffic and forwarding it to a security tool for analysis.
+
+QoS (Quality of Service): Prioritizing voice and video traffic over basic file transfers so calls don't drop.
+
+Layer 3 Switches (The Hybrid)
+While traditional switches operate exclusively at Layer 2 using hardware MAC addresses, advanced corporate switches cross the boundary into Layer 3 (Network Layer). They possess specialized internal chips that allow them to handle IP Routing functions at blistering speeds, moving traffic between completely different subnets without needing to pass the data up to a dedicated router.
