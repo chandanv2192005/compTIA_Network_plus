@@ -1,0 +1,9 @@
+While a Forward Proxy sits in front of clients to protect and manage users, a Reverse Proxy does the exact opposite: it sits in front of backend web servers to protect, optimize, and manage the servers.
+
+When you type a URL like netflix.com or amazon.com, you are never actually communicating directly with their internal application servers. Instead, your request hits their Reverse Proxy at the front gate. The reverse proxy intercepts your request, decides which internal server should handle it, fetches the data, and returns it to you.
+
+When a highly anticipated show drops on Netflix, millions of people in the same city try to stream the exact same video file at 8:00 PM.
+
+The Problem: Having internal application servers fetch the massive video file from deep database storage for millions of individual streams would create massive lag and latency.
+
+How the Reverse Proxy Acts: Netflix uses specialized reverse proxies at the edge of their network (part of their Open Connect CDN). The first time a video is requested, the reverse proxy fetches it, but it also saves a copy of that video in its own high-speed cache memory. For the next million users, the reverse proxy serves the video directly from its own cache instantly, completely shielding the core backend servers from processing the request.
