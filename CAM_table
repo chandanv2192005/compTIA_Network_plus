@@ -1,0 +1,7 @@
+How does a switch know exactly which device is plugged into which physical port? It uses an internal, high-speed hardware logbook called a CAM Table (Content Addressable Memory Table) or MAC Address Table.
+
+MAC Addresses: Every network card manufactured in the world has a globally unique, 12-digit physical fingerprint burned into it at the factory, known as a Media Access Control (MAC) address (e.g., 00:1A:2B:3C:4D:5E).
+
+The Learning Process: When you turn a switch on, its logbook is blank. The moment Computer A plugs into Port 1 and sends out a packet, the switch inspects the packet header, grabs Computer A's Source MAC address, and writes down: Port 1 = Computer A.
+
+The Forwarding Process: When Computer B replies, the switch checks its table. It matches Computer B's target MAC address to Port 1 and beams the data directly down that wire.
