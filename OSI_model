@@ -1,0 +1,62 @@
+7. The Application Layer
+This is the layer that interacts directly with the software applications you use. It is responsible for identifying communication partners, determining resource availability, and synchronizing communication.
+
+The Job: Provides network services directly to end-user applications (like web browsers or email clients).
+
+Analogy: Writing a letter and putting it in an envelope.
+
+Key Protocols: HTTP/HTTPS (web browsing), SMTP/IMAP (email), FTP (file transfers), DNS (domain name resolution).
+
+6. The Presentation Layer
+This layer is the network's "translator and security guard." It reformats data so that different systems (e.g., a Mac talking to a Windows server or an Android phone) can understand each other.
+
+The Job: Data translation, data compression, and data encryption/decryption (like SSL/TLS processing).
+
+Analogy: Translating your letter from English to Spanish so the recipient can read it, or writing it in a secret code (encryption).
+
+Key Concepts: JPEG, GIF, MP3, SSL/TLS.
+
+5. The Session Layer
+This layer acts as the coordinator or "flight controller" of a conversation. It sets up, manages, and terminates connections (sessions) between two devices.
+
+The Job: Keeping different data streams separate, managing authentication, and placing "checkpoints" in data transfers so if a connection drops, it can resume from the last checkpoint instead of starting over.
+
+Analogy: Making a phone call, holding the line open while you talk, and hanging up when done.
+
+Key Protocols: NetBIOS, RPC (Remote Procedure Call).
+
+4. The Transport Layer
+This layer is responsible for end-to-end communication control, flow control, and error checking. It decides how the data should be sent.
+
+The Job: Chooses between speed and reliability. It chops large pieces of data into smaller chunks called Segments on the sending side, and puts them back together on the receiving side.
+
+Analogy: Deciding whether to send your mail via certified post requiring a signature (TCP) or regular mail where you hope it arrives (UDP).
+
+Key Protocols: TCP (Transmission Control Protocol - slow, reliable, guarantees delivery) and UDP (User Datagram Protocol - fast, unreliable, great for video streaming/gaming).
+
+3. The Network Layer
+This is the routing layer. It is responsible for finding the best physical path for the data to travel across different networks to reach its destination.
+
+The Job: It takes the segments from Layer 4, adds the source and destination logical addresses (IP Addresses), and turns them into Packets.
+
+Analogy: Writing the destination mailing address and return address on the outside of your package.
+
+Key Devices & Protocols: Routers, IP (IPv4/IPv6), ICMP (Ping).
+
+2. The Data Link Layer
+While the Network Layer handles communication between completely different networks, the Data Link layer handles communication between devices on the same local network.
+
+The Job: It takes the packets from Layer 3, packages them into Frames, and attaches physical hardware addresses called MAC Addresses. It also handles physical error checking.
+
+Analogy: The local mail truck driver navigating the specific streets within your neighborhood to drop the package at your exact house number.
+
+Key Devices & Protocols: Network Switches, Ethernet, Wi-Fi (802.11), MAC Addresses.
+
+1. The Physical Layer
+This is the actual hardware layer. It deals with the raw electrical signals, radio waves, or light pulses that represent data.
+
+The Job: Converting the binary digital data (1s and 0s) into physical signals to travel across a physical medium.
+
+Analogy: The physical copper wire, fiber-optic cable, or radio frequency the letter travels along.
+
+Key Hardware: Ethernet cables (Cat6), Fiber-optic cables, Hubs, Pins on a connector.
