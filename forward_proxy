@@ -13,3 +13,4 @@ Commercial VPNs and web proxies act as forward proxies to shield consumer identi
 The Scenario: You are sitting in India, but you want to test how a streaming website behaves for a user located in London.
 
 How the Proxy Acts: You connect to a forward proxy server physically located in the UK. When you type in the streaming website's URL, the forward proxy makes the request. To the streaming platform's load balancers, the request looks like it originated from a local UK resident. The proxy receives the video stream and forwards the packets back down to your machine in India.
+ 
