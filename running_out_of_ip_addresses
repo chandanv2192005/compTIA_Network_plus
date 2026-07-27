@@ -5,8 +5,7 @@ Instead of giving every single device on Earth its own public IP address, NAT al
 
 How it works: Your home router gets one public IPv4 address from your ISP. Inside your house, your laptop, phone, smart TV, and Raspberry Pi all get Private IP addresses (like 192.168.1.X). When your laptop browses the web, your router translates your private IP into its public IP, tracks the connection port, and sends the data back to your laptop.
 
-Impact: A single public IP address can host tens of thousands of active connections across multiple devices simultaneously.
-
+Impact: A single public IP address can host tens of thousands of active connections across multiple devices simultaneously. 
 2. Carrier-Grade NAT (CGNAT) — ISP-Level Sharing
 As even public IPs became scarce for Internet Service Providers (ISPs), they took NAT a step further by deploying Carrier-Grade NAT (CGNAT).
 
