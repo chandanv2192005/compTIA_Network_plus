@@ -1,0 +1,22 @@
+1. Network Address Translation (NAT) — The Temporary Savior
+The single biggest reason the internet didn't crash when IPv4 ran out is NAT (Network Address Translation).
+
+Instead of giving every single device on Earth its own public IP address, NAT allows an entire home or company network (with hundreds or thousands of devices) to share one single public IP address.
+
+How it works: Your home router gets one public IPv4 address from your ISP. Inside your house, your laptop, phone, smart TV, and Raspberry Pi all get Private IP addresses (like 192.168.1.X). When your laptop browses the web, your router translates your private IP into its public IP, tracks the connection port, and sends the data back to your laptop.
+
+Impact: A single public IP address can host tens of thousands of active connections across multiple devices simultaneously.
+
+2. Carrier-Grade NAT (CGNAT) — ISP-Level Sharing
+As even public IPs became scarce for Internet Service Providers (ISPs), they took NAT a step further by deploying Carrier-Grade NAT (CGNAT).
+
+Instead of assigning one public IP address to your home router, the ISP places an entire neighborhood or city block behind a massive router.
+
+Thousands of households end up sharing a single public IP address assigned by the ISP.
+
+3. IPv6 — The Permanent SolutionThe ultimate long-term solution to IPv4 exhaustion is IPv6 (Internet Protocol version 6).IPv4: 192.168.1.1                (32 bits  -> 4.3 Billion Addresses)
+IPv6: 2001:0db8:85a3::8a2e:0370  (128 bits -> ~3.4 × 10^38 Addresses)
+Capacity: IPv6 provides $340\text{ trillion trillion trillion}$ unique addresses ($3.4 \times 10^{38}$). That is enough to assign a unique IP address to every grain of sand on Earth.Current State: The internet is currently in a "dual-stack" transition phase where devices run both IPv4 and IPv6 simultaneously until IPv4 is fully retired.
+
+4. An Active Market for IPv4 Addresses
+Because IPv4 addresses are scarce, they became valuable financial assets. Companies that owned large blocks of IPv4 addresses early on (like universities, tech giants, and telecoms) now sell or rent unused IPv4 address space. Cloud providers (like AWS, Azure, and Google Cloud) pass these costs onto customers by charging extra fees to hold onto static public IPv4 addresses.
